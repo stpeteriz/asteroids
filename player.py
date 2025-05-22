@@ -30,7 +30,6 @@ class Player(CircleShape):
         
     def update(self,dt):
         keys = pygame.key.get_pressed()
-        print(self.timer)
         self.timer = max(0,self.timer - dt)
        
         
@@ -54,7 +53,6 @@ class Player(CircleShape):
         self.rotation = (self.rotation%360)
         velocity = pygame.Vector2(0,1)
         velocity = velocity.rotate(self.rotation)
-        print(f"Player rotation: {self.rotation}, Shot velocity: {velocity}")
         velocity *= PLAYER_SHOOT_SPEED
         shot.velocity = velocity
 
