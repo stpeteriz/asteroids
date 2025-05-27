@@ -40,7 +40,7 @@ def main():
                     asteroids_hit.append(asteroid)
                     shots_hit.append(shot)
         for a in set(asteroids_hit):
-            a.kill()
+            a.split()
         for s in set(shots_hit):
             s.kill()
         screen.fill("black")
